@@ -1,0 +1,5 @@
+board:
+  name: PineTime_SmartWatch
+  vendor: pine64
+  socs:
+    - name: nrf52832

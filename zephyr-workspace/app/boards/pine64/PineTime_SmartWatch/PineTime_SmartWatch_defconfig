@@ -1,0 +1,18 @@
+CONFIG_ARM_MPU=y
+CONFIG_HW_STACK_PROTECTION=y
+
+CONFIG_CONSOLE=y                    # Enable console
+CONFIG_LOG=y                        # Enable LOG
+
+CONFIG_USE_SEGGER_RTT=y             # Enable RTT SEGGER
+CONFIG_RTT_CONSOLE=y                # Enable printk()
+CONFIG_LOG_BACKEND_RTT=y            # Enable LOG_XXX()
+CONFIG_LOG_BACKEND_SHOW_COLOR=y     # Enable color for LOG_XXX()
+CONFIG_LOG_MODE_MINIMAL=n           # Enable mini version for LOG_XXX()
+CONFIG_LOG_MODE_IMMEDIATE=y         # Immediately LOG
+
+
+
+CONFIG_UART_CONSOLE=n
+CONFIG_GPIO=n  # enable uart driver
+CONFIG_SERIAL=n  # enable console
