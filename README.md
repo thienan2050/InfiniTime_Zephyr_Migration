@@ -19,10 +19,18 @@ west init zephyr-workspace --mr v4.2-branch
 cd zephyr-workspace
 west update
 ```
+#### Prerequisites
+
+1. Download Zephyr SDK from [Zephyr Project] (Choose the correct OS in Assets).\
+2. Extract it to your preferred directory (e.g., `/Users/<username>/Desktop/zephyrproject-rtos/zephyr-sdk-0.16.4`).
+```sh
+export ZEPHYR_SDK_INSTALL_DIR="/Users/username/Desktop/Zephyrproject-rtos/zephyr-sdk-0.16.4"
+```
+
 #### Build the application:
 ```sh
 cd app
-west build -b PineTime_SmartWatch -- -DBOARD_ROOT=../InfiniTime_Zephyr_Migration/zephyr-workspace/app
+west build -b PineTime_SmartWatch -- -DBOARD_ROOT=../app
 ```
 #### Flash the application
 ```sh
@@ -37,3 +45,4 @@ nrfjprog --eraseall -f NRF52 && nrfjprog --program build/zephyr/zephyr.hex --ver
 [Zephyr platform]: <https://www.zephyrproject.org>
 [v1.0]: <www.google.com>
 [Thien An Bui]: <https://www.facebook.com/ThienAn.SEng>
+[Zephyr Project]: <https://github.com/zephyrproject-rtos/sdk-ng/releases>
